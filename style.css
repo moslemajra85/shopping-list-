@@ -78,8 +78,30 @@ h1 {
   padding: 15px;
   width: 100%;
   border: none;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid coral;
   background-color: pink;
   outline: none;
   border-radius: 10px;
+  font-size: 22px;
+  color: coral;
+}
+
+.colored {
+  color: black;
+  background-color: #f0f0f0; /* Light starting color */
+  animation: colorChange 0.5s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #f0f0f0; /* Light */
+  }
+
+  50% {
+    background-color: orange;
+  }
+  
+  100% {
+    background-color:yellow; /* Dark */
+  }
 }

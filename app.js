@@ -3,6 +3,7 @@ const clearBtn = document.querySelector('#clear');
 const trashIcons = document.querySelectorAll('.delete');
 const addBtn = document.querySelector('.add');
 const items = document.querySelectorAll('.child');
+let list = document.querySelector('#list');
 
 const search = document.querySelector('#search');
 
@@ -46,33 +47,25 @@ trashIcons.forEach((icon) => {
   });
 });
 
-addBtn.addEventListener('click', addItem);
-clearBtn.addEventListener('click', clearAllItems);
+function searchItem(text) {
+  let target;
+  const items = Array.from(list.children);
 
-// event
-
-// target: The element that triggered the event --> the element that you click on
-// currentTarget: The element that the event listener is attached to
-
-const logo = document.querySelector('#logo');
-
-function onClick(e) {
-  // console.log(e.target);
-  // console.log(e.currentTarget);
-  //console.log(e.type);
-
-  //The coordinated of where you click relative to the window
-  // console.log(e.clientX);
-  // console.log(e.clientY);
-
-  // the coordinate of where you click within the element
-  console.log(e.offsetX);
-  console.log(e.offsetY);
+   items.forEach((item) => {
+    if(item.textContent.trim().toLowerCase() === text.toLowerCase()) {
+      item.classList.add('colored')
+      return item;
+    }else {
+      item.classList.remove('colored')
+    }
+  });
 }
 
-logo.addEventListener('click', onClick);
+search.addEventListener('input', (event) => {
+   searchItem(event.target.value);
+  
+});
 
-// document.body.addEventListener('click', function (e) {
-//   console.log(e.target);
-//   console.log(e.currentTarget);
-// });
+ 
+addBtn.addEventListener('click', addItem);
+clearBtn.addEventListener('click', clearAllItems);
