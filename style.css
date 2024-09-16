@@ -1,0 +1,85 @@
+body {
+  background-color: pink;
+}
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+header {
+  display: flex;
+}
+header img {
+  width: 100px;
+}
+
+#add {
+  padding: 20px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  width: 100%;
+  color: coral;
+  font-size: 18px;
+}
+
+.add {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 22px;
+  color: #fff;
+  background-color: orange;
+  cursor: pointer;
+  margin: 10px 0;
+}
+#app-title {
+  font-size: 25px;
+  letter-spacing: 0.5rem;
+}
+h1 {
+  color: coral;
+}
+#list {
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-trash-can {
+  cursor: pointer;
+}
+#list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  color: coral;
+}
+
+.btn {
+  padding: 10px 12px;
+  background-color: black;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 22px;
+}
+
+#search {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: pink;
+  outline: none;
+  border-radius: 10px;
+}
